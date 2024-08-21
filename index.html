@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define a codificação de caracteres do documento como UTF-8 -->
+    <meta charset="UTF-8">
+    
+    <!-- Configura a viewport para que o layout seja responsivo em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página, que aparece na aba do navegador -->
+    <title>OCR Verificação de Valores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho principal da página -->
+    <h1>Verificação de Valores em Documentos</h1>
+    
+    <!-- Campo de entrada de arquivo para o usuário selecionar o arquivo a ser processado -->
+    <input type="file" id="fileInput">
+    
+    <!-- Botão que dispara o processamento do arquivo selecionado -->
+    <button onclick="processFile()">Processar</button>
+    
+    <!-- Div onde os resultados do processamento serão exibidos -->
+    <div id="result"></div>
+
+    <!-- Inclusão da biblioteca Tesseract.js para reconhecimento óptico de caracteres (OCR).
+         Esta biblioteca permite extrair texto de imagens e PDFs. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/5.1.0/tesseract.min.js" 
+            integrity="sha512-nodtkMdJZK6MzKRMeGK/MrIcuXdbnHzPaBHuZhNYJTL+uB4KszN88EXfwXDny2z/Ce6ooCUPHiPzFAqdBK0B1A==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer">
+    </script>
+    
+    <!-- Inclusão da biblioteca PDF.js para renderização de arquivos PDF em um canvas.
+         PDF.js converte páginas de PDF em imagens que podem ser processadas pelo Tesseract.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    
+    <!-- Inclusão do arquivo de script onde está o código JavaScript personalizado para processar
+         os arquivos de imagem e PDF selecionados pelo usuário. -->
+    <script src="script.js"></script>
+</body>
+</html>
